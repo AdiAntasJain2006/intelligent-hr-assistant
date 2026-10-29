@@ -1,0 +1,34 @@
+"""All settings for our app live application, in one place"""
+
+import os 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Environment variables 
+groq_api_key = os.getenv("GROQ_API_KEY")
+jina_api_key = os.getenv("JINA_API_KEY")
+
+# Define path - vector_store or data 
+file_path = os.path.join('data', 'HR_Data.txt')
+vec_store_path = os.path.join('data', 'faiss_index')
+
+# Models 
+LLM_model = "openai/gpt-oss-120b"
+Embeddings_model = "jina-embeddings-v4"
+
+# Chunk / Splitter config
+chunk_size = 500
+chunk_overlap = 50
+
+# Retrieval
+top_k = 5
+
+# System instructions
+system_prompt = "You are a professional HR assistant who answers employee and recruitment questions accurately using the provided HR knowledge base, protects confidential information, never invents policies, and escalates sensitive or company-specific issues to authorized HR personnel."
+
+def check_api_key() :
+    if not groq_api_key :
+        raise ValueError("Missing GROQ api key")
+    if not jina_api_key :
+        raise ValueError("Missing JINA api key")

@@ -12,4 +12,5 @@ ipykernel
 
 streamlit
 
+langsmith
 python-dotenv

@@ -9,6 +9,12 @@ load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 jina_api_key = os.getenv("JINA_API_KEY")
 
+# TRACING
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "false")
+LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT")
+LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT")
+
 # Define path - vector_store or data 
 file_path = os.path.join('data', 'HR_Data.txt')
 vec_store_path = os.path.join('data', 'faiss_index')

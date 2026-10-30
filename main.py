@@ -2,12 +2,14 @@
 
 import hr_assistant
 
-
+from hr_assistant.logger import get_logger
 from hr_assistant.pipeline import ask_agent, build_hr_assistant, build_vec_store_for_docs
+
+logger = get_logger(__name__)
 
 
 def main() :
-    
+    logger.info("Starting HR assistant CLI demo")
     agent = build_hr_assistant()
     print("Assistant ready")
     
@@ -21,6 +23,7 @@ def main() :
     
     for question in demo_questions :
         print(ask_agent(agent, question))
-        
+    logger.info("HR assistant CLI demo completed")
+
 if __name__ == "__main__" :
     main()

@@ -3,6 +3,7 @@
 
 from langchain.agents import create_agent
 from hr_assistant import config
+from hr_assistant.logger import get_logger
 
 def create_hr_agent(llm, tools):
     """Return a LangChain agent that can
@@ -10,4 +11,6 @@ def create_hr_agent(llm, tools):
     agent = create_agent(model=llm,
                         tools=tools,
                         system_prompt=config.system_prompt)
+    logger = get_logger(__name__)
+    logger.info("Agent created successfully")
     return agent

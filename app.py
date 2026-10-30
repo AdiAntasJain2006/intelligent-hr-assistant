@@ -4,6 +4,9 @@ import streamlit as st
 
 from hr_assistant import config
 from hr_assistant.pipeline import ask_agent, build_hr_assistant
+from hr_assistant.logger import get_logger
+
+logger = get_logger(__name__)
 
 SAMPLE_QUESTIONS = [
     "What are the key steps in the employee hiring process?",

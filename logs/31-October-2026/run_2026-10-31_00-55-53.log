@@ -1,0 +1,3 @@
+2026-10-31 00:55:53,678 | INFO | hr_assistant.pipeline | Generating response to HR assistant question
+2026-10-31 00:55:53,678 | INFO | hr_assistant.pipeline | HR assistant response generated
+2026-10-31 00:55:53,962 | INFO | hr_assistant.pipeline | Found saved vector store

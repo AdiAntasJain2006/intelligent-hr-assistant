@@ -1,0 +1,23 @@
+2026-10-31 00:49:03,897 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:49:03,900 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:49:03,902 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:49:03,903 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:49:06,055 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-31 00:49:06,056 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-31 00:49:06,056 | INFO | faiss.loader | Loading faiss.
+2026-10-31 00:49:06,176 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-31 00:49:06,218 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:49:06,219 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:49:06,230 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:49:06,965 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:49:06,970 | INFO | hr_assistant.pipeline | User question: hello
+2026-10-31 00:49:06,970 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:49:06,971 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:49:06,972 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:49:06,973 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:49:09,003 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:49:09,005 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:49:09,013 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:49:09,088 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:49:09,913 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

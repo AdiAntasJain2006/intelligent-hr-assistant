@@ -1,0 +1,73 @@
+2026-10-31 00:14:48,095 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:14:48,097 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:14:48,098 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:14:48,099 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:14:50,131 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-31 00:14:50,131 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-31 00:14:50,132 | INFO | faiss.loader | Loading faiss.
+2026-10-31 00:14:50,208 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-31 00:14:50,220 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:14:50,226 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:14:50,229 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:14:50,494 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:14:50,494 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:14:50,495 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:14:50,495 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:14:50,496 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:14:52,380 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:14:52,381 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:14:52,383 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:14:52,401 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:14:53,288 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:14:53,322 | INFO | hr_assistant.tools | search_hr_policy called with query: What are the key steps in the employee hiring process?
+2026-10-31 00:14:55,335 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 00:14:57,008 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:14:57,017 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:14:57,018 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:14:57,020 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:14:57,021 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:14:58,790 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:14:58,791 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:14:58,793 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:14:58,808 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:14:59,565 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:14:59,569 | INFO | hr_assistant.tools | search_hr_policy called with query: documents required when joining a new company
+2026-10-31 00:15:00,433 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 00:15:02,676 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:02,760 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:15:02,762 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:15:02,763 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:15:02,764 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:15:04,456 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:15:04,458 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:15:04,465 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:15:04,508 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:15:05,071 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:05,075 | INFO | hr_assistant.tools | search_hr_policy called with query: How can an employee apply for leave?
+2026-10-31 00:15:05,755 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 00:15:07,095 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:07,097 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:15:07,098 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:15:07,099 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:15:07,099 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:15:08,948 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:15:08,950 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:15:08,953 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:15:08,982 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:15:09,786 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:09,790 | INFO | hr_assistant.tools | search_hr_policy called with query: salary credited incorrect what to do
+2026-10-31 00:15:10,287 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 00:15:11,463 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:11,470 | INFO | hr_assistant.document_loader | Loading document from 'data\HR_Data.txt'
+2026-10-31 00:15:11,473 | INFO | hr_assistant.document_loader | Loaded 1 document(s)
+2026-10-31 00:15:11,474 | INFO | hr_assistant.splitter | Split document(s) into 37 chunk(s)
+2026-10-31 00:15:11,475 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 00:15:13,509 | INFO | hr_assistant.vector_store | Vector store saved successfully
+2026-10-31 00:15:13,514 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 00:15:13,516 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 00:15:13,564 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 00:15:14,123 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 00:15:14,129 | INFO | hr_assistant.tools | search_hr_policy called with query: report workplace harassment misconduct reporting procedure
+2026-10-31 00:15:14,752 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 00:15:16,487 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

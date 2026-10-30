@@ -12,6 +12,7 @@ from hr_assistant.splitter import split_into_chunks
 from hr_assistant.tools import create_search_tool
 from hr_assistant.vector_store import build_vec_store, save_vec_store, get_retriever, load_vec_store, is_vector_store
 from hr_assistant.logger import get_logger
+from hr_assistant.tracing import check_langsmith_tracing
 
 logger = get_logger(__name__)
 
@@ -36,6 +37,7 @@ def build_vec_store_for_docs(file_path : str = config.file_path) :
 def build_hr_assistant(file_path : str = config.vec_store_path) :
     """Using this fxn we are trying to build agent with tools and brain"""
     config.check_api_key()
+    check_langsmith_tracing()
     
     vector_store = build_vec_store_for_docs()
     retriever = get_retriever(vector_store)

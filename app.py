@@ -3,10 +3,17 @@
 import streamlit as st
 
 from hr_assistant import config
+from hr_assistant.guardrails import REFUSAL_MESSAGE
 from hr_assistant.pipeline import ask_agent, build_hr_assistant
 from hr_assistant.logger import get_logger
 
 logger = get_logger(__name__)
+
+SAFETY_CHECK_MESSAGE = (
+    "The safety checks could not approve this response. This can happen when a "
+    "request is blocked or the safety service is unavailable. Check the latest "
+    "application log in `logs/` for the underlying reason."
+)
 
 SAMPLE_QUESTIONS = [
     "What are the key steps in the employee hiring process?",
@@ -33,9 +40,20 @@ def ask(question: str):
     agent = load_assistant()
     with st.chat_message("assistant"):
         with st.spinner("Looking up HR guidance..."):
-            answer = ask_agent(agent, question)
-        st.markdown(answer)
+            answer = ask_agent(
+                agent,
+                question,
+                chat_history=st.session_state.messages[:-1],
+            )
+        render_answer(answer)
     st.session_state.messages.append({"role": "assistant", "content": answer})
+
+
+def render_answer(answer: str):
+    if answer == REFUSAL_MESSAGE:
+        st.warning(SAFETY_CHECK_MESSAGE)
+    else:
+        st.markdown(answer)
 
 
 def main():
@@ -80,7 +98,10 @@ def main():
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+            if message["role"] == "assistant":
+                render_answer(message["content"])
+            else:
+                st.markdown(message["content"])
 
     if question:
         st.session_state.messages.append({"role": "user", "content": question})

@@ -3,3 +3,5 @@ data\faiss_index
 .env
 
 myenv
+
+logs

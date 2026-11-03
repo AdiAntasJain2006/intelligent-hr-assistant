@@ -1,0 +1,25 @@
+2026-10-31 01:12:10,337 | INFO | hr_assistant.tracing | LangSmith tracing ENABLED - project 'HR-Agent', traces at https://smith.langchain.com
+2026-10-31 01:12:10,338 | INFO | hr_assistant.pipeline | Found saved vector store
+2026-10-31 01:12:10,340 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 01:12:10,354 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-10-31 01:12:10,355 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-31 01:12:10,355 | INFO | faiss.loader | Loading faiss.
+2026-10-31 01:12:10,468 | INFO | faiss.loader | Successfully loaded faiss.
+2026-10-31 01:12:10,495 | INFO | hr_assistant.vector_store | Vector store loaded successfully
+2026-10-31 01:12:10,495 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 01:12:10,503 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 01:12:11,046 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 01:12:11,050 | INFO | hr_assistant.pipeline | Generating response to HR assistant question
+2026-10-31 01:12:11,050 | INFO | hr_assistant.tracing | LangSmith tracing ENABLED - project 'HR-Agent', traces at https://smith.langchain.com
+2026-10-31 01:12:11,051 | INFO | hr_assistant.pipeline | Found saved vector store
+2026-10-31 01:12:11,051 | INFO | hr_assistant.embeddings | Initializing embeddings model 'jina-embeddings-v4'
+2026-10-31 01:12:11,054 | INFO | hr_assistant.vector_store | Vector store loaded successfully
+2026-10-31 01:12:11,055 | INFO | hr_assistant.vector_store | Retreival process starts
+2026-10-31 01:12:11,061 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-10-31 01:12:11,107 | INFO | hr_assistant.agent | Agent created successfully
+2026-10-31 01:12:11,771 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 01:12:11,802 | INFO | hr_assistant.tools | Searching HR policy knowledge base
+2026-10-31 01:12:12,496 | INFO | hr_assistant.tools | Found 5 matching chunk(s)
+2026-10-31 01:12:14,500 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-31 01:12:14,521 | INFO | hr_assistant.pipeline | HR assistant response generated

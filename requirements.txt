@@ -5,7 +5,11 @@ langchain-community
 langchain-groq
 langchain-text-splitters
 
-faiss-cpu
+# vector store
+
+langchain-qdrant
+qdrant-client
+
 
 jupyter
 ipykernel

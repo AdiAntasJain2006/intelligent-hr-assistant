@@ -9,6 +9,14 @@ load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 jina_api_key = os.getenv("JINA_API_KEY")
 
+#Guard
+GUARD_MODEL_NAME = "openai/gpt-oss-safeguard-20b"
+
+# VECTOR_STORE
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+QDRANT_URL = os.getenv("QDRANT_CLUSTER_ENDPOINT")
+QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME")
+
 # TRACING
 LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "false")
 LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT")

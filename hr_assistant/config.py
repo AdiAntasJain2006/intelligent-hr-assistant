@@ -46,3 +46,6 @@ def check_api_key() :
         raise ValueError("Missing GROQ api key")
     if not jina_api_key :
         raise ValueError("Missing JINA api key")
+
+# Evaluation
+JUDGE_MODEL_NAME = "openai/gpt-oss-120b"

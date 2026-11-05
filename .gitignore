@@ -5,3 +5,5 @@ data\faiss_index
 myenv
 
 logs
+
+rag.ipynb

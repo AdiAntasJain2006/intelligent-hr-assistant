@@ -7,3 +7,7 @@ myenv
 logs
 
 rag.ipynb
+
+# Local files
+rag.ipynb
+.env
